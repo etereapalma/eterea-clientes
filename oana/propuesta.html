@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eterea | Propuesta de Entrenamiento - Oana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-sage: #d8e2dc;
+            --color-blush: #efe5dc;
+            --color-sand: #fdfbf7;
+            --color-charcoal: #2c3e50;
+            --color-accent: #9d8189;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-sand);
+            color: var(--color-charcoal);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .blob {
+            position: absolute;
+            z-index: -1;
+            filter: blur(40px);
+            opacity: 0.6;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.05);
+        }
+
+        .vertical-line {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #2c3e50, transparent);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-rose-200 selection:text-stone-800">
+
+    <!-- Decorative Organic Backgrounds -->
+    <div class="blob bg-rose-100 w-96 h-96 rounded-full top-0 left-0 mix-blend-multiply"></div>
+    <div class="blob bg-stone-200 w-96 h-96 rounded-full top-40 right-0 mix-blend-multiply animation-delay-2000"></div>
+    <div class="blob bg-emerald-50 w-96 h-96 rounded-full bottom-0 left-20 mix-blend-multiply animation-delay-4000"></div>
+
+    <!-- Header / Hero -->
+    <header class="relative min-h-[80vh] flex flex-col justify-center items-center text-center px-6 pt-20">
+        <span class="uppercase tracking-[0.3em] text-xs mb-4 text-stone-500">Movimiento & Biomecánica</span>
+        <h1 class="text-7xl md:text-9xl serif font-light text-stone-800 mb-2 tracking-tighter">ETER<span class="italic font-normal">E</span>A</h1>
+        <div class="h-px w-24 bg-stone-400 my-8"></div>
+        <h2 class="text-3xl md:text-5xl serif text-stone-700 mb-6">El Arte de Habitar tu Fuerza</h2>
+        <p class="text-lg md:text-xl font-light max-w-2xl text-stone-600 leading-relaxed">
+            Propuesta exclusiva para <span class="font-medium text-stone-800">Oana</span><br>
+            <span class="italic text-sm serif mt-2 block">3 Mesociclos | 3 Meses | Evolución Estructural</span>
+        </p>
+
+        <div class="mt-12 animate-bounce">
+            <i data-lucide="arrow-down" class="text-stone-400 font-thin"></i>
+        </div>
+    </header>
+
+    <!-- Mission -->
+    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <i data-lucide="orbit" class="mx-auto mb-6 text-stone-400 w-10 h-10"></i>
+        <h3 class="text-3xl serif italic mb-8">Nuestra Misión</h3>
+        <p class="text-xl font-light leading-loose text-stone-700">
+            Fortalecer tu estructura corporal a través de la <strong>ganancia de masa muscular</strong>, optimizando tu salud integral.
+        </p>
+    </section>
+
+    <!-- Philosophy Grid -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+        <div class="mb-12 text-center">
+            <h3 class="text-4xl serif mb-2">1. Nuestra Filosofía de Trabajo</h3>
+            <p class="text-stone-500 font-light">Salud y Poder Femenino</p>
+            <p class="mt-6 text-stone-600 font-light max-w-3xl mx-auto leading-relaxed">
+                En <strong>Eterea</strong>, entendemos que el músculo es un órgano vital, especialmente en esta etapa de plenitud. Tu programa está diseñado para que ganes esa fuerza estructural que protege tus articulaciones y acelera tu metabolismo, sin que eso fatigue tu sistema nervioso para tus clases técnicas.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-stone-100 card-hover">
+                <i data-lucide="activity" class="text-rose-300 mb-4"></i>
+                <h4 class="text-xl serif font-semibold mb-3">Sinergia de Movimiento</h4>
+                <p class="text-sm font-light leading-relaxed text-stone-600">
+                    Vamos a integrar tus horas de Yoga, Aéreo Yoga, Handstand y Pilates. El entrenamiento de fuerza no va a ser un obstáculo, sino el sostén para que tus verticales se sientan más livianas y estables.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-stone-100 card-hover">
+                <i data-lucide="link" class="text-emerald-300 mb-4"></i>
+                <h4 class="text-xl serif font-semibold mb-3">Integración de Cadenas Musculares</h4>
+                <p class="text-sm font-light leading-relaxed text-stone-600">
+                    No solo moveremos pesas; trabajaremos la conexión entre tus pies, tus caderas y tu columna. Queremos que la fuerza que ganes se traduzca en una vertical más estable y en un habitar el cuerpo de una forma funcional para la vida cotidiana.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-stone-100 card-hover">
+                <i data-lucide="shield" class="text-stone-400 mb-4"></i>
+                <h4 class="text-xl serif font-semibold mb-3">Blindaje Articular Completo</h4>
+                <p class="text-sm font-light leading-relaxed text-stone-600">
+                    Además de la salud gleno-humeral (hombros), pondremos el foco en la <strong>estabilidad lumbo-pélvica</strong> (tu centro de poder) y en la <strong>movilidad de cadera</strong>. Esto es vital para proteger tu espalda y asegurar que tus articulaciones absorban las cargas de forma eficiente.
+                </p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-stone-100 card-hover">
+                <i data-lucide="user-cog" class="text-rose-300 mb-4"></i>
+                <h4 class="text-xl serif font-semibold mb-3">Biomecánica Consciente</h4>
+                <p class="text-sm font-light leading-relaxed text-stone-600">
+                    Cada ejercicio está elegido para proteger las articulaciones. Vamos a fusionar la fuerza de las pesas con el control de el propio peso de tu cuerpo a través de la calistenia, priorizando siempre la calidad del movimiento y técnica.
+                </p>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-white/60 backdrop-blur-sm p-8 rounded-2xl border border-stone-100 card-hover md:col-span-2 lg:col-span-2">
+                <i data-lucide="heart-pulse" class="text-emerald-300 mb-4"></i>
+                <h4 class="text-xl serif font-semibold mb-3">Escuchar al Cuerpo (Autorregulación)</h4>
+                <p class="text-sm font-light leading-relaxed text-stone-600">
+                    Usaremos escalas de esfuerzo para que, si un día venís cansada de una jornada intensa, podamos adaptar la carga. Entrenamos para potenciarte, no para agotarte.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Rhythm (Timeline) -->
+    <section class="max-w-4xl mx-auto px-6 py-24 relative">
+        <h3 class="text-4xl serif text-center mb-16">2. Tu Ritmo Semanal: <span class="italic text-stone-500">Equilibrio y Presencia</span></h3>
+        <p class="text-center text-stone-600 bg-white/50 backdrop-blur-md p-6 rounded-xl border border-stone-100 max-w-2xl mx-auto mb-16 shadow-sm">
+            Diseñé este esquema para que llegues a tus clases de <strong>Handstand</strong> con la energía necesaria y la musculatura estabilizadora lista.
+        </p>
+
+        <div class="absolute left-6 md:left-1/2 h-full w-px bg-stone-300 top-0 bottom-0 transform -translate-x-1/2"></div>
+
+        <!-- Day Item: Monday -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+            <div class="md:w-5/12 text-left md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-12">
+                <h4 class="text-xl serif font-bold text-stone-800">Lunes</h4>
+                <p class="text-rose-400 text-sm uppercase tracking-wider mb-2">Apertura y Tracción</p>
+                <p class="text-sm font-light text-stone-600">
+                    <em>Mañana:</em> Pilates + Aeroyoga.<br>
+                    <em>Tarde:</em> <strong>Sesión 1: Tracción (Pull).</strong> Foco en fortalecer la espalda alta y retracciones escapulares. Buscamos una postura alineada y una base firme para tus agarres.
+                </p>
+            </div>
+            <div class="absolute left-6 md:left-1/2 w-4 h-4 bg-stone-800 rounded-full border-4 border-stone-100 transform -translate-x-1/2 order-1 md:order-2 z-10"></div>
+            <div class="md:w-5/12 order-3"></div>
+        </div>
+
+        <!-- Day Item: Tuesday -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+            <div class="md:w-5/12 order-1"></div>
+            <div class="absolute left-6 md:left-1/2 w-4 h-4 bg-white border-2 border-stone-400 rounded-full transform -translate-x-1/2 order-1 md:order-2 z-10"></div>
+            <div class="md:w-5/12 order-2 md:order-3 pl-12">
+                <h4 class="text-xl serif font-bold text-stone-800">Martes</h4>
+                <p class="text-emerald-400 text-sm uppercase tracking-wider mb-2">Empuje y Estabilidad</p>
+                <p class="text-sm font-light text-stone-600">
+                    <em>Mañana:</em> Hipopresivos + Yoga.<br>
+                    <em>Tarde:</em> <strong>Sesión 2: Empuje (Push).</strong> Fuerza para empujar el suelo con consciencia. Lo programamos hoy para que mañana tus hombros descansen antes de tus invertidas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Day Item: Wednesday -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+             <div class="md:w-5/12 text-left md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-12">
+                <h4 class="text-xl serif font-bold text-stone-800">Miércoles</h4>
+                <p class="text-rose-400 text-sm uppercase tracking-wider mb-2">Raíces Fuertes (En el Gym)</p>
+                <p class="text-sm font-light text-stone-600">
+                    <em>Mañana:</em> Sesion de Handstand en Eterea. Hoy tu sistema nervioso está fresco y receptivo. El foco es puramente técnico y artístico.<br>
+                    <em>Tarde:</em> <strong>Sesión 3: Pierna Anterior.</strong> Combinamos el trabajo de pesas para salud ósea con la técnica de la <em>Pistol Squat, etc</em>. Piernas potentes para un control motor total.
+                </p>
+            </div>
+            <div class="absolute left-6 md:left-1/2 w-4 h-4 bg-stone-800 rounded-full border-4 border-stone-100 transform -translate-x-1/2 order-1 md:order-2 z-10"></div>
+            <div class="md:w-5/12 order-3"></div>
+        </div>
+
+        <!-- Day Item: Thursday -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+            <div class="md:w-5/12 order-1"></div>
+            <div class="absolute left-6 md:left-1/2 w-4 h-4 bg-white border-2 border-stone-400 rounded-full transform -translate-x-1/2 order-1 md:order-2 z-10"></div>
+            <div class="md:w-5/12 order-2 md:order-3 pl-12">
+                <h4 class="text-xl serif font-bold text-stone-800">Jueves</h4>
+                <p class="text-emerald-400 text-sm uppercase tracking-wider mb-2">Recuperacion Activa</p>
+                <p class="text-sm font-light text-stone-600">
+                    <strong>Mañana: Hipopresivos y Yoga.</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- Day Item: Friday -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+             <div class="md:w-5/12 text-left md:text-right order-2 md:order-1 pl-12 md:pl-0 md:pr-12">
+                <h4 class="text-xl serif font-bold text-stone-800">Viernes</h4>
+                <p class="text-rose-400 text-sm uppercase tracking-wider mb-2">Fuerza Sistémica (Open Gym + Handstand)</p>
+                <p class="text-sm font-light text-stone-600">
+                    <em>Tarde:</em> <strong>Sesión 4: Cadena Posterior.</strong> Peso Muerto e Hip Thrust (fuerza clave para la mujer). Aprovechamos las instalaciones mientras esperás a Tara de 16 a 17 hs.<br>
+                    Cerramos con Handstand para integrar la fuerza ganada.
+                </p>
+            </div>
+            <div class="absolute left-6 md:left-1/2 w-4 h-4 bg-stone-800 rounded-full border-4 border-stone-100 transform -translate-x-1/2 order-1 md:order-2 z-10"></div>
+            <div class="md:w-5/12 order-3"></div>
+        </div>
+
+         <!-- Day Item: Weekend -->
+         <div class="relative flex flex-col md:flex-row items-center justify-between mb-12 group">
+            <div class="md:w-5/12 order-1"></div>
+            <div class="absolute left-6 md:left-1/2 w-4 h-4 bg-white border-2 border-stone-400 rounded-full transform -translate-x-1/2 order-1 md:order-2 z-10"></div>
+            <div class="md:w-5/12 order-2 md:order-3 pl-12">
+                <h4 class="text-xl serif font-bold text-stone-800">Fin de Semana</h4>
+                <p class="text-emerald-400 text-sm uppercase tracking-wider mb-2">Recuperación y Regeneración</p>
+                <p class="text-sm font-light text-stone-600">
+                    <strong>Sábado:</strong> Workout de cardio suave en casa para optimizar el flujo sanguíneo y la reparación de los tejidos o Yoga a elección.<br>
+                    <strong>Domingo:</strong> Yoga suave, hipopresivos y descanso total. El momento donde el cuerpo asimila el trabajo y se fortalece.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Add -->
+    <section class="bg-stone-100 py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-4xl serif mb-6 text-center">3. Acompañamiento Eterea (Valor Añadido)</h3>
+            <p class="text-center text-stone-600 font-light mb-12">Este servicio es un diálogo constante entre profesora y alumna:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="flex gap-4">
+                    <div class="bg-white p-3 h-fit rounded-full shadow-sm"><i data-lucide="file-text" class="text-stone-400"></i></div>
+                    <div>
+                        <h4 class="font-bold serif text-lg">Programación Eterea</h4>
+                        <p class="text-sm font-light text-stone-600 mt-2">Un plan detallado en PDF con variables adaptadas a tus sensaciones, preogresiones, molestias, etc.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="bg-white p-3 h-fit rounded-full shadow-sm"><i data-lucide="video" class="text-stone-400"></i></div>
+                    <div>
+                        <h4 class="font-bold serif text-lg">Análisis Técnico Asíncrono</h4>
+                        <p class="text-sm font-light text-stone-600 mt-2">Me mandás tus videos de entrenamiento y yo analizo tus vectores de fuerza para corregir y optimizar la técnica a distancia.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="bg-white p-3 h-fit rounded-full shadow-sm"><i data-lucide="users" class="text-stone-400"></i></div>
+                    <div>
+                        <h4 class="font-bold serif text-lg">Encuentros de Evolución</h4>
+                        <p class="text-sm font-light text-stone-600 mt-2">Cada 15 días ajustamos el mesociclo según tus progresos y cómo te vayas sintiendo. Estos encuentros podriamos hacerlos los Miércoles luego de Handstand.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="bg-white p-3 h-fit rounded-full shadow-sm"><i data-lucide="key" class="text-stone-400"></i></div>
+                    <div>
+                        <h4 class="font-bold serif text-lg">Acceso Exclusivo a Eterea</h4>
+                        <p class="text-sm font-light text-stone-600 mt-2">Disponer de un espacio profesional y técnicamente equipado los Miércoles y Viernes para que tu práctica sea fluida y sin interrupciones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Investment -->
+    <section class="max-w-5xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+            <h3 class="text-5xl serif mb-4">4. Tu Inversión</h3>
+            <p class="text-stone-500 font-light italic mb-8">Más que una Rutina, un Diseño de Vida</p>
+            <div class="text-left text-stone-600 font-light leading-relaxed space-y-4 max-w-4xl mx-auto mb-16 bg-white p-8 rounded-2xl shadow-sm border border-stone-100">
+                <p>A menudo, lo que no se ve es lo que garantiza resultados reales. Esta propuesta no es un simple plan de ejercicios; es un <strong>servicio de Guía de Entrenamiento Personalizada</strong> que incluye:</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><strong>Arquitectura del Entrenamiento:</strong> Horas de estudio para sincronizar Yoga, Pilates y Verticales sin riesgo.</li>
+                    <li><strong>Acompañamiento Fuera del Estudio:</strong> Revisión de videos asíncrona semanal.</li>
+                    <li><strong>Mentoría Técnica:</strong> Encuentros quincenales donde te enseño el <em>porqué</em> de cada movimiento.</li>
+                    <li><strong>Acceso Exclusivo:</strong> Espacio Eterea Miércoles y Viernes.</li>
+                </ul>
+                <p class="mt-4">Para consolidar estas adaptaciones de salud y asegurar un cambio real en tu vitalidad, te propongo dos formas de trabajo:</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center gap-8 items-stretch">
+
+            <!-- Option B (Standard) -->
+            <div class="md:w-1/3 p-8 border border-stone-200 rounded-2xl flex flex-col justify-between opacity-80 hover:opacity-100 transition-opacity">
+                <div>
+                    <h4 class="text-2xl serif mb-2 text-stone-600">OPCIÓN B: Seguimiento Mensual</h4>
+                    <div class="text-4xl font-light text-stone-800 mb-6">125€ <span class="text-sm text-stone-400">/ mes</span></div>
+                    <ul class="space-y-3 text-sm font-light text-stone-600 text-left mb-8">
+                        <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Programación Eterea</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Corrección de video</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4"></i> Acceso a instalaciones</li>
+                    </ul>
+                </div>
+                <button class="w-full py-3 border border-stone-800 text-stone-800 rounded-full hover:bg-stone-100 transition-colors uppercase tracking-widest text-xs">Seleccionar</button>
+            </div>
+
+            <!-- Option A (Premium) -->
+            <div class="md:w-1/3 p-8 bg-stone-800 text-stone-50 rounded-2xl shadow-xl transform md:-translate-y-4 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-rose-200 text-stone-800 text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Recomendado</div>
+                <div>
+                    <h4 class="text-2xl serif mb-2 text-stone-100">OPCIÓN A: Compromiso Trimestral</h4>
+                    <p class="text-stone-400 text-xs mb-4">Pago único de 300€ (Bonifica tu constancia)</p>
+                    <div class="text-4xl font-light text-white mb-6">100€ <span class="text-sm text-stone-400">/ mes</span></div>
+                    <ul class="space-y-3 text-sm font-light text-stone-300 text-left mb-8">
+                        <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-200"></i> Planificación + Corrección + Accesos</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-200"></i> 6 Encuentros presenciales</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-200"></i> Mentoría técnica profunda</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-rose-200"></i> Servicio Premium Integral</li>
+                    </ul>
+                </div>
+                <button class="w-full py-3 bg-rose-200 text-stone-900 font-semibold rounded-full hover:bg-white transition-colors uppercase tracking-widest text-xs">Comenzar Viaje</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-12 text-center">
+        <h2 class="text-3xl serif text-stone-200 mb-4 tracking-widest">ETEREA</h2>
+        <p class="font-light text-sm mb-8">Cultura del Movimiento & Arte Aéreo</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
