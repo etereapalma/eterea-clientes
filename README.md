@@ -1,37 +1,85 @@
-# Clientes - Portal Eterea
+# Eterea Clientes Portal
 
-Estructura para compartir documentos con clientes vía web.
+Static site for sharing training documents with clients.
 
-## Estructura
+## Links
+
+- **Production:** https://eterea-clientes.vercel.app
+- **GitHub:** https://github.com/etereapalma/eterea-clientes
+
+## Auto-deploy
+
+Pushes to `main` trigger automatic Vercel deployment. No manual deploy needed.
+
+```bash
+git add . && git commit -m "update" && git push
+```
+
+## Structure
 
 ```
 /Clientes
-  /oana
-    index.html        ← Portal del cliente (lista de documentos)
-    propuesta.html    ← Propuesta de entrenamiento
-    factura-xxx.html  ← Facturas
-    rutina-x.html     ← Rutinas de cada mesociclo
-  /maria
-    index.html
-    ...
+  vercel.json         ← Clean URLs config
+  /{client-name}/
+    index.html        ← Client portal (links to their documents)
+    propuesta.html    ← Training proposal
+    factura-*.html    ← Invoices
+    rutina-*.html     ← Mesocycle routines
 ```
 
-## Despliegue
+## URLs
+
+| Client | Portal URL | Example Document |
+|--------|------------|------------------|
+| Oana | `/oana/` | `/oana/propuesta` |
+| María | `/maria/` | `/maria/propuesta` |
+
+## Add New Client
 
 ```bash
-cd Clientes
-vercel --prod
+# 1. Create folder
+mkdir oana   # use lowercase, no spaces
+
+# 2. Copy template
+cp oana/index.html nuevo-cliente/
+cp oana/propuesta.html nuevo-cliente/  # if similar
+
+# 3. Edit content
+# - Update name in index.html title and heading
+# - Customize propuesta.html content
+
+# 4. Deploy (auto on push)
+git add .
+git commit -m "Add cliente: nombre"
+git push
+
+# 5. Share link
+# https://eterea-clientes.vercel.app/nuevo-cliente/
 ```
 
-## URLs resultantes
+## Add Document to Existing Client
 
-- `https://tu-proyecto.vercel.app/oana/` → Portal de Oana
-- `https://tu-proyecto.vercel.app/oana/propuesta` → Su propuesta
-- `https://tu-proyecto.vercel.app/maria/` → Portal de María
+```bash
+# 1. Create file
+touch oana/factura-enero-2026.html
 
-## Agregar nuevo cliente
+# 2. Add content (copy style from propuesta.html)
 
-1. Crear carpeta: `mkdir nombre-cliente`
-2. Copiar index.html de otro cliente como plantilla
-3. Personalizar contenido
-4. `vercel --prod` para redesplegar
+# 3. Add link in oana/index.html:
+# <a href="factura-enero-2026.html">🧾 Factura Enero 2026</a>
+
+# 4. Push
+git add . && git commit -m "Add factura enero for Oana" && git push
+```
+
+## Old Link Redirect
+
+The original link `https://oana-rutina-propuesta.vercel.app` redirects to the new portal.
+That project lives in `/Negocio/Rutinas Personalisadas/` (separate Vercel project).
+
+## Tips
+
+- Use lowercase folder names without spaces
+- Keep file names descriptive: `rutina-mesociclo-1.html`
+- The `cleanUrls` config means `/oana/propuesta` works (no .html needed)
+- Commit messages help track what changed when
