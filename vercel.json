@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/propuesta", "destination": "/oana/propuesta", "permanent": true },
+    { "source": "/propuesta.html", "destination": "/oana/propuesta", "permanent": true }
+  ]
 }
