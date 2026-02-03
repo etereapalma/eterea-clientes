@@ -3,7 +3,6 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/propuesta", "destination": "/oana/propuesta", "permanent": true },
-    { "source": "/propuesta.html", "destination": "/oana/propuesta", "permanent": true }
+    { "source": "/(.*)", "destination": "https://eterea-clientes-eight.vercel.app/$1", "permanent": true }
   ]
 }
